@@ -1,6 +1,7 @@
 {
   "NAV": {
-    "INDEX": "ブログ",
+    "INDEX": "Home",
+    "BLOG":"ブログ",
     "LINK": "リンク ",
     "READ": "読む",
     "RSS": "購読",
