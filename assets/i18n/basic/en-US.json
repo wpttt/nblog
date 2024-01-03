@@ -1,7 +1,8 @@
 {
   "NAV": {
-    "INDEX": "Home",
-    "BLOG":"Blog",
+    "INDEX": "Blog",
+    "HOME":"Home",
+    "LIFE": "Gallery",
     "LINK": "Links",
     "READ": "Reading",
     "RSS": "RSS",
