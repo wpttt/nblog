@@ -69,7 +69,7 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
   <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
 </details>
 
-## 在Docker上搞
+## 在Docker上把玩
 
 非官方, 感谢 [@Vaayne](https://github.com/craigary/nobelium/pull/157)的工作!
 
