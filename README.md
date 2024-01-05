@@ -1,8 +1,8 @@
 <img src="https://cdn.statically.io/gh/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50">
 
-# Nobelium
+# 我的Nobelium博客
 
-A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss).
+通过Notion和Nextjs静态博客，部署在 [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss)上。
 
 <p>
   <a aria-label="GitHub commit activity" href="https://github.com/craigary/nobelium/commits/main" title="GitHub commit activity">
@@ -21,56 +21,59 @@ A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://ve
 
 Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
-<details><summary>Screenshot</summary>
+<details><summary>页面截图</summary>
 <img src="https://github.com/craigary/nobelium/blob/main/desktop.png?raw=true">
 </details>
 
-## Highlights ✨
+## 特点 ✨
+<details>
+  <summary><b>🚀 &nbsp;快速、准实时响应</b></summary>
+&nbsp;- Fast page render and responsive design<br>
+&nbsp;- Fast static generation with efficient compiler
+</details>
 
-**🚀 &nbsp;Fast and responsive**
+<details>
+  <summary><b>🤖 &nbsp;快速部署</b></summary>
+&nbsp;- Deploy on Vercel in minutes<br>
+&nbsp;- 无需重新部署即可自动生成新增内容
+</details>
 
-- Fast page render and responsive design
-- Fast static generation with efficient compiler
 
-**🤖 &nbsp;Deploy instantly**
+<details>
+  <summary><b>🚙 &nbsp;功能齐全</b></summary>
+&nbsp;- Comments, full width page, quick search and tag filter<br>
+&nbsp;- RSS, analytics, web vital... and much more
+</details>
 
-- Deploy on Vercel in minutes
-- Incremental regeneration and no need to redeploy after update the content in notion
-
-**🚙 &nbsp;Fully functional**
-
-- Comments, full width page, quick search and tag filter
-- RSS, analytics, web vital... and much more
-
-**🎨 &nbsp;Easy for customization**
-
-- Rich config options, support English & Chinese interface
-- Built with Tailwind CSS, easy for customization
+<details>
+  <summary><b>🎨 &nbsp;易于定制**</b></summary>
+&nbsp;- 丰富的配置选项, support English & Chinese interface<br>
+&nbsp;- Built with Tailwind CSS, 易于定制
+</details>
 
 **🕸 &nbsp;Pretty URLs and SEO friendly**
 
-## Quick Start
+## 快速启动（原repo）
 
-- Star this repo 😉
-- Duplicate [this Notion template](https://craigary.notion.site/866916e3b939468b9b6f1d47dce99f9c), and share it to the public
-- [Fork](https://github.com/craigary/nobelium/fork) this project
-- Customize `blog.config.js`
-- _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
-- Deploy on [Vercel](https://vercel.com), set following environment variables：
-  - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
-  - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
-    - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
-- **That's it!** Easy-peasy?
+- Duplicate [这个Notion模板](https://craigary.notion.site/866916e3b939468b9b6f1d47dce99f9c)，并通过shear设置为publish；
+- Fork [这个](https://github.com/craigary/nobelium/fork)项目；
+- 自定义修改 `blog.config.js`；
+- _(可选)_ 替换`/publish`目录中的 `favicon.svg` 和 `favicon.ico`，这是自己的网站 logo；
+-  在[Vercel](https://vercel.com)上进行部署，设置以下环境变量：
+  - `NOTION_PAGE_ID` (必需): 已设置共享位web的Notion页面的ID，通常为workspace地址后的32位数字；
+  - `NOTION_ACCESS_TOKEN` (可选, 不推荐): 如果你不分享这个database，你可以利用token来让Nobelium从database中抓取数据，你可以在浏览器cookies中找到它，它叫`token_v2`
+    - 记住，token有效期只有180填, 需要在vercel的dashboard进行手动更新。
+- **就这些**，较简单不
 
-<details><summary>Wait for a sec, what is Page ID？</summary>
+<details><summary>Page ID 在这里？</summary>
   <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
 </details>
 
-## Play With Docker
+## 在Docker上搞
 
-Unofficial, thanks to [@Vaayne](https://github.com/craigary/nobelium/pull/157)'s work!
+非官方, 感谢 [@Vaayne](https://github.com/craigary/nobelium/pull/157)的工作!
 
-### Build Docker image yourself
+### 构建自己的Docker镜像
 ```
 # set env
 export NOTION_PAGE_ID=xxx # your NOTION_PAGE_ID
@@ -83,7 +86,7 @@ docker build -t ${IMAGE} --build-arg NOTION_PAGE_ID .
 docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} nobelium:latest
 ```
 
-### Use default docker image
+### 使用默认docker镜像
 ```
 # pull image
 docker pull ghcr.io/craigary/nobelium:main
@@ -92,9 +95,9 @@ docker pull ghcr.io/craigary/nobelium:main
 docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} ghcr.io/craigary/nobelium:main
 ```
 
-## Roadmap
+## 路线图
 
-Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e51653445ab5b347e4efac079e)
+在[这里](https://craigary.notion.site/Public-Roadmap-89d184e51653445ab5b347e4efac079e)查看我们的路线图.
 
 - [x] Better SEO
 - [x] Dark mode
@@ -103,7 +106,7 @@ Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e
 - [x] Sitemap
 - [ ] ...
 
-## Technical details
+## 技术细节
 
 - **Generation**: Next.js and Incremental Static Regeneration
 - **Page render**: [react-notion-x](https://github.com/NotionX/react-notion-x)
@@ -113,15 +116,15 @@ Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e
 ## FAQ
 
 <details>
-  <summary>How can I change my avatar?</summary>
-  Nobelium fetches avatars from <a href="https://gravatar.com">Gravatar</a>. You need to set your avatar there with <strong>the same email address</strong> that you defined in <code>blog.config.js</code>.
+  <summary>如何更改头像?</summary>
+  Nobelium会从<a href="https://gravatar.com">Gravatar</a>获取头像，所以你需要在这儿设置你的头像，记得使用<code>blog.config.js</code>中设置的email</strong>。
 </details>
 <details>
-  <summary>My posts disappear after I set up grouping in Notion database!</summary>
-  Nobelium currently doesn’t support Notion database grouping. If you really want to manage your posts by groups, you can create views with filters instead.
+  <summary>我在Notion中设置了分组后文章就消失了!</summary>
+  Nobelium目前还不支持 Notion database 的分组功能. 如果想分组管理你的文章，可以尝试新建database的多个view，然后后通过filter过滤不通的分组.
 </details>
 
-## Special Thanks
+## 鸣谢
 
 <table><tr align="left">
   <td align="center"><a href="https://notion.so/cnotion" title="Notion CN Community"><img src="https://avatars.githubusercontent.com/u/4792552" width="64px;"alt="Notion CN Community"/></a><br/><a href="https://notion.so/cnotion" title="Notion CN Community">Notion CN Community</a></td>
@@ -130,7 +133,7 @@ Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e
   <td align="center"><a href="https://spencerwoo.com/" title="Spencer Woo"><img src="https://avatars.githubusercontent.com/u/32114380" width="64px;" alt="Niin"/></a><br/><a href="https://spencerwoo.com" title="Spencer Woo">Spencer Woo</a></td>
 </tr></table>
 
-## Contributors
+## 贡献者
 
 <table><tr align="left">
   <td align="center"><a href="https://github.com/craigary"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Craig Hart"/><br/><sub><b>Craig Hart</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner" >🎫 🔧 🎨 🐛</a></td>
@@ -140,6 +143,6 @@ Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e
   <td align="center"><a href="https://github.com/ruter"><img src="https://avatars.githubusercontent.com/u/8568876" width="64px;" alt="Ruter"/><br/><sub><b>Ruter</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=ruter" title="Ruter" >🔧 🐛</a></td>
 </tr></table>
 
-## License
+## 许可
 
 The MIT License.
